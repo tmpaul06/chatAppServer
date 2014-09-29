@@ -1,0 +1,27 @@
+25000
+=====
+Mean lag: 21.540246 ms
+Standard Deviation: 5.04762928883 ms
+Max lag: 52.503 ms
+Min lag: 15.792 ms
+Average Message Throughput 4138
+Std Dev 3156
+Max Throughput 12178
+Min Throughput 7
+Avg Users: 26
+Nrooms: 1000
+Max Users: 50
+Min Users: 2
+Message Delay: 2s
+=====
+
+=38385=
+Mean lag: 12.802284 ms
+Standard Deviation: 1.91179391864 ms
+Max lag: 18.235 ms
+Min lag: 10.038 ms
+Average Message Throughput:  0.431456286074
+Std Dev: 0.256861987275
+Max Throughput: 0.972585073633
+Min Throughput: 0.0140727396152
+******

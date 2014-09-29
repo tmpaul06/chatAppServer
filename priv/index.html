@@ -1,0 +1,55 @@
+<!DOCTYPE HTML>  
+<html>  
+<head>
+<script type="text/javascript">  
+var ws;  
+  
+function register() {
+    if (!ws) {
+        console.log("Websocket connection not established");
+    } else {
+        ws.send("User");
+    }
+}
+
+function send()  
+{
+    if (!ws) {
+        console.log("Websocket connection not established");
+    } else {
+        ws.send("hello world");
+    }
+}  
+  
+function open()  
+{  
+    if (!("WebSocket" in window)) {  
+        alert("This browser does not support WebSockets");  
+        return;
+    }  
+    /* @todo: Change to your own server IP address */  
+    ws = new WebSocket("ws://localhost:8080/websocket"); 
+    ws.onopen = function() {  
+        console.log('Connected');  
+    };  
+    ws.onmessage = function (evt)  
+    {  
+        console.log(evt.data);
+    };
+    ws.onclose = function()  
+    {  
+        console.log('Connection closed');  
+    };  
+}  
+</script>  
+</head>  
+<body>  
+<div id="sse">  
+   <a href="javascript:open()">Open websocket connection</a><br/>  
+   <a href="javascript:send()">Send Message</a>
+   <a href="javascript:register()">Register</a>
+</div>  
+<div id="msgs">  
+</div>  
+</body>  
+</html>  
